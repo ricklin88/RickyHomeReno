@@ -22,11 +22,14 @@
 }
 
 #dropmenuul {
-  display: ;
+  display: none;
   position: absolute;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+#dropmenuli:hover #dropmenuul {
+  display: block;
+}
 
