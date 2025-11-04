@@ -10,6 +10,15 @@
   border: 1px solid red
 }
 
+a:hover {
+  cursor: pointer;
+  COLOR: blue;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
 #navigation {
   list-style-type: none;
   margin: 0;
