@@ -17,6 +17,7 @@ a:hover {
 #header {
   display: flex;
   justify-content: space-between;
+  
 }
 
 #navigation {
@@ -40,5 +41,9 @@ a:hover {
 
 #dropmenuli:hover #dropmenuul {
   display: block;
+}
+
+li {
+  padding: 0 2rem;
 }
 
