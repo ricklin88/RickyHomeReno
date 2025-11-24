@@ -6,6 +6,16 @@
   font-size: 16px;
 }
 
+:root {
+  --maincolor: #2F4EA2;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  background-color: blue;
+}
+
 * {
   border: 1px solid red
 }
@@ -47,6 +57,7 @@ li {
   padding: 0 2rem;
 }
 
+<<<<<<< HEAD
 .frontimg-container {
   position: relative;
 }
@@ -61,3 +72,8 @@ img {
   width: 50%; 
   object-fit: contain;
 }
+=======
+#header2 {
+  background-color: var(--maincolor);
+}
+>>>>>>> 84831dcfc00599b627317314c0851671195920ae
