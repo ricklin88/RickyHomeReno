@@ -33,11 +33,24 @@
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
 
   z-index: 1000;
+
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.quote-tab:hover {
+transform: translateY(-50%) translateX(-6px);
+background-color: #000;
+
 }
 
 .quote-arrow {
   font-size: 20px;
   margin-bottom: 12px;
+  transition: transform 0.25s ease;
+}
+
+.quote-tab:hover .quote-arrow {
+  transform: translateX(-4px) rotate(180deg);
 }
 
 .quote-text {
