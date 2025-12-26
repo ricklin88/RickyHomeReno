@@ -10,6 +10,10 @@
   --maincolor: #2F4EA2;
 }
 
+* {
+  border: 1px solid red
+}
+
 .quote-tab {
   position: fixed;
   top: 50%;
@@ -60,14 +64,11 @@ background-color: #000;
   text-orientation: mixed;
 }
 
-h2 {
-  color: white;
-  text-align: center;
-  background-color: blue;
-}
-
-* {
-  border: 1px solid red
+.quote-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
 }
 
 a:hover {

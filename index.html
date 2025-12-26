@@ -7,6 +7,47 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <aside class="quote-drawer">
+        <div class="quote-drawer-headre">
+            <h2>Request a Quote</h2>
+            <button class="quote-close">x</button>
+        </div>
+
+        <p class="quote-audience">
+            For homeowners, builders, and light commerical projects.
+        </p>
+
+        <form class="quote-form">
+            <label>
+                Name *
+                <input type="text" required>
+            </label>
+
+            <label>
+                Email *
+                <input type="email" required>
+            </label>
+
+            <label>
+                Project type
+                <select>
+                    <option>Residential</option>
+                    <option>Commerical</option>
+                    <option>Renovation</option>
+                    <option>Other</option>
+                </select>
+            </label>
+
+            <label>
+                Message
+                <textarea rows="4" maxlength="500"></textarea>
+            </label>
+        
+            <button type="submit">Send Request</button>
+        </form>
+        
+    </aside>
+
     <div class="quote-tab">
         <span class="quote-arrow">→</span>
         <span class="quote-text">REQUEST A QUOTE</span>
