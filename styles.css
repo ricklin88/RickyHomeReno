@@ -68,7 +68,60 @@ background-color: #000;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1001;
+  
+  width: 360px;
+  height: 100vh;
+
+  background-color: #fff;
+  color:#222;
+
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.25);
+
+  
+
+  z-index: 1100;
+
+  display: flex;
+  flex-direction: column; 
+  padding: 24px; 
+}
+
+.quote-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote-drawer-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.quote-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.quote-form label {
+  display: flex;
+  flex-direction: column; 
+  font-size: 14px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  padding: 8px;
+  font-size: 14px;
 }
 
 a:hover {
