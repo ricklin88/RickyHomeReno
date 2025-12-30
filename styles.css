@@ -15,6 +15,8 @@
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: 6rem;
+
+  --header-height: 60px;
 }
 
 body {
@@ -51,6 +53,7 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
+  height: var(--header-height);   
   z-index: 10;
   background: rgba(0, 0, 0, 0.6);
 }
@@ -97,6 +100,8 @@ p {
 
   letter-spacing: 0.12em;
   text-transform: uppercase;
+
+  
 }
 
 .nav-menu a {
@@ -108,8 +113,14 @@ p {
 /* ACTIVE STATE */
 .nav-menu.active {
   transform: translateY(0);
-  height: 70vh;
+
+  position: fixed;
+  top: var(--header-height);
+  height: calc(70vh - var(--header-height));
+  
   backdrop-filter: blur(10px); /* study this */ 
+
+  z-index: 9;
 }
 
 /* HERO */
@@ -362,81 +373,6 @@ background-color: #000;
   font-size: 14px;
 }
 
-
-a:hover {
-  cursor: pointer;
-  COLOR: blue;
-}
-
-body {
-  position: relative;
-}
-
-#header {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: white;
-}
-
-#navigation {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; 
-  display: flex;
-}
-
-#dropmenuli {
-  position: relative;
-}
-
-#dropmenuul {
-  display: none;
-  position: absolute;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#dropmenuli:hover #dropmenuul {
-  display: block;
-}
-
-li {
-  padding: 0 2rem;
-}
-
-.frontimg-container {
-  position: relative;
-}
-.frontimg-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
-}
-
-.frontimgtitle {
-  position: absolute;
-  font-size: 10rem;
-  color: white;
-  top: 50%;
-  left: 1%;
-  width: 50%;
-}
-
-img { 
-  width: 100%; 
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-
 @media (max-width: 768px) {
 
   .quote-drawer {
@@ -477,6 +413,11 @@ img {
   .nav-menu a {
     font-size: 0.9rem;
     letter-spacing: 1px;
+  }
+
+  .nav-menu a:hover {
+    cursor: pointer;
+    color: var(--text-muted);
   }
 
   .projects {
