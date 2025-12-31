@@ -16,7 +16,7 @@
   --space-lg: 4rem;
   --space-xl: 6rem;
 
-  --header-height: 60px;
+  --header-height: 56px;
 }
 
 body {
@@ -53,7 +53,7 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
-  height: var(--header-height);   
+  min-height: var(--header-height);   
   z-index: 10;
   background: rgba(0, 0, 0, 0.6);
 }
@@ -69,6 +69,7 @@ p {
   color: white;
   font-weight: 600;
   letter-spacing: 2px;
+
 }
 
 .menu-toggle {
@@ -397,6 +398,11 @@ background-color: #000;
 
 /* Tablet */
 @media (min-width: 768px) {
+  
+  .site-header {
+    height: auto;
+  }
+
   .menu-toggle {
     display: none;
   }
