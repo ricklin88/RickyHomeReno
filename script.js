@@ -1,14 +1,28 @@
-const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".nav-menu");
+function loadPartial(id, file, callback) {
+  const target = document.getElementById(id);
+  if (!target) return;
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  
+  fetch(file)
+    .then(res => res.text())
+    .then(data => {
+      target.innerHTML = data;
+      if (typeof callback === "function") callback();
+    });
+}
+
+/* HEADER */
+loadPartial("site-header", "partials/header.html", () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-menu");
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
 });
 
-/* FADE-IN ON SCROLL */
-const faders = document.querySelectorAll(".fade-in");
-
+/* FADE-IN OBSERVER */
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
@@ -18,11 +32,13 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.2
-  }
+  { threshold: 0.2 }
 );
 
-faders.forEach(el => observer.observe(el));
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
-
+/* FOOTER */
+loadPartial("site-footer", "partials/footer.html", () => {
+  const footer = document.getElementById("site-footer");
+  if (footer) observer.observe(footer);
+});

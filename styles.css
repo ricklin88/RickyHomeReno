@@ -79,6 +79,11 @@ p {
   white-space: nowrap;
 }
 
+.logo a {
+  color: white;
+  text-decoration: none;
+} 
+
 .menu-toggle {
   background: none;
   border: none;
